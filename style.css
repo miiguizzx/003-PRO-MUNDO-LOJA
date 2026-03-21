@@ -2,18 +2,24 @@ html, body{
 margin:0;
 padding:0;
 width:100%;
-height:100%;
+min-height:100vh;
 background:url("img/bg.jpg") no-repeat center center fixed;
 background-size:cover;
+overflow-x:hidden;
+font-family:Arial, sans-serif;
 }
 
 body{
-cursor: crosshair;
+cursor: url("img/rato_seta.png"), pointer;
 margin:0;
 background:url("img/bg2.jpg");
 background-position: 1.3ex;
 color:rgb(255, 255, 255); 
 font-family: 'Orbitron', sans-serif;
+
+a, button, img{
+cursor: url("img/rato_link.png"), pointer;
+}
 }
 
 .center{
@@ -30,7 +36,7 @@ margin:10px;
 background:black;
 color:rgb(255, 255, 255);
 border:1px solid rgb(255, 255, 255);
-cursor: -webkit-grabbing;
+cursor:url("img/rato_link.png"), pointer;
 }
 
 button:hover{
@@ -56,7 +62,7 @@ position:fixed;
 top:10px;
 left:10px;
 width:120px;
-cursor: -webkit-grabbing;
+cursor: url("img/rato_link.png"), pointer;
 }
 
 .album-page,
@@ -70,7 +76,7 @@ background-position:center;
 width:500px;
 filter:blur(20px);
 transition:0.3s;
-cursor: -webkit-grabbing;
+cursor: url("img/rato_link.png"), pointer;
 }
 
 .albumImg:hover{
@@ -87,7 +93,7 @@ gap:100px;
 
 .merchCenter img{
 width:600px;
-cursor:-webkit-grabbing;
+cursor: url("img/rato_link.png"), pointer;
 transition:0.3s;
 }
 
@@ -172,7 +178,7 @@ z-index:1000;
 
 .socials img{
 width:30px;
-cursor: -webkit-grabbing;
+cursor: url(img/rato_link.png), pointer;
 transition:0.2s;
 }
 
@@ -187,14 +193,14 @@ width:25px;
 }
 
 .productPage{
-width:100%;
-height:100vh;
+min-height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
-gap:60px;
-padding:90px;
+gap:5vw;
+padding:5vw;
 box-sizing:border-box;
+flex-wrap:wrap;
 }
 
 .productImg{
@@ -240,7 +246,7 @@ color:black;
 border:1px solid white;
 font-weight:bold;
 letter-spacing:1px;
-cursor:moz-grabbing;
+cursor: url("img/rato_link.png"), pointer;
 transition:0.2s;
 }
 
@@ -263,7 +269,7 @@ z-index:1000;
 .topMenu a{
 color:white;
 text-decoration:none;
-cursor:pointer;
+cursor: url("img/rato_link.png"), pointer;
 }
 
 .topMenu a:hover{
@@ -284,91 +290,32 @@ color:white;
 border:1px solid white;
 }
 
-@media (max-width:900px){
-
-/* MENU */
-.topMenu{
-right:10px;
-gap:15px;
-font-size:12px;
-}
-
-
-/* LOGO */
-.logo3d{
-width:60px;
-top:5px;
-left:5px;
-}
-
-
-/* CENTER PAGES */
-.center{
-padding:20px;
-text-align:center;
-}
-
-
-/* PRODUCT PAGE */
-.productPage{
-flex-direction:column;
-justify-content:center;
-align-items:center;
-gap:20px;
+img{
+max-width:100%;
 height:auto;
-margin-top:80px;
 }
 
-
-/* IMAGEM PRODUTO */
 .productImg img{
-width:250px;
-max-width:90%;
-}
-
-
-/* INFO PRODUTO */
-.productInfo{
-max-width:90%;
-text-align:center;
-}
-
-
-/* BOTAO */
-.buyBtn{
+max-width:600px;
 width:100%;
 }
 
-
-/* TAMANHOS */
-.sizes{
-justify-content:center;
-flex-wrap:wrap;
-}
-
-
-/* SEARCH BAR */
-.searchBar{
-right:10px;
-top:45px;
+@media (max-width:1200px){
+.topMenu{
+gap:15px;
+font-size:12px;
 }
 }
 
-@media (max-width:900px){
-
+@media (max-height:800px){
 .productPage{
-margin-top:100px;
+margin-top:80px;
+}
+.logo3d{
+width:70px;
 }
 }
 
-@media (max-width:900px){
-
-.center h1{
-font-size:28px;
-}
-
-.center button{
-width:80%;
-margin:10px auto;
-}
+*{
+box-sizing:border-box;
 }
